@@ -1,0 +1,16 @@
+<filter>
+    <filter-name>shopfilter</filter-name>
+    <filter-class>servlet.ShopFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>shopfilter</filter-name>
+    <url-pattern>/shop/*</url-pattern>
+</filter-mapping>
+<filter>
+    <filter-name>useridfilter</filter-name>
+    <filter-class>servlet.UserIdFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>useridfilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>

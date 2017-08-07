@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>输出属性</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script language="JavaScript">
+        $(document).ready(function() {
+            $("p").click(function() {
+                alert($(this).text());
+            });
+
+            $("#button").click(function() {
+                alert($("input[name='Fruit']:checked").length);
+            })
+
+            $("#button2").click(function() {
+                var $tr = "<tr><td>" + $("input[name='username']").val() + "</td><td>" + $("input[name='email']").val() +
+                    "</td><td>" + $("input[name='phone']").val() + "</td><td><a href='delete'>删除</a></td></tr>";
+                $("#list").append($tr);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+
+    <form action="" method="get">
+        您喜欢的水果？<br /><br />
+        <label><input name="Fruit" type="checkbox" value="" />苹果 </label>
+        <label><input name="Fruit" type="checkbox" value="" />桃子 </label>
+        <label><input name="Fruit" type="checkbox" value="" />香蕉 </label>
+        <label><input name="Fruit" type="checkbox" value="" />梨 </label>
+        <input type="button" id="button" value="checkdenum">
+    </form>
+
+    <p>添加用户：</p>
+    姓名：<input type="text" name="username"> email：
+    <input type="text" name="email"> 电话：
+    <input type="number" name="phone">
+    <input type="button" name="button2" id="button2" value="提交" />
+
+    <table id="list">
+        <tr>
+            <th>姓名</th>
+            <th>email</th>
+            <th>电话</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>
+                <a href="delete">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>
+                <a href="delete">删除</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+
+</html>
